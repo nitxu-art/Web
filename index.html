@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nitxu.Art — Cuadros, dibujos y arte personalizado</title>
+    <meta name="description" content="Convertimos tus momentos, personas e ideas en arte. Retratos y obras originales hechas a mano.">
+    
+    <!-- Tipografías -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Navegación -->
+    <header class="header">
+        <div class="header-container">
+            <a href="#" class="logo">
+                <img src="assets/logo.png" alt="Nitxu.Art Logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <span class="logo-text" style="display:none;">Nitxu.Art</span>
+            </a>
+            
+            <button class="menu-toggle" aria-label="Abrir menú">
+                <span></span><span></span>
+            </button>
+
+            <nav class="nav-menu">
+                <a href="#inicio">Inicio</a>
+                <a href="#obras">Obras</a>
+                <a href="#sobre-mi">Sobre mí</a>
+                <a href="#personalizados">Personalizados</a>
+                <a href="#contacto">Contacto</a>
+                <div class="nav-social">
+                    <a href="#">IG</a>
+                    <a href="#">Email</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section id="inicio" class="hero section-padding">
+            <div class="hero-content">
+                <h2 class="descriptor">CUADROS · DIBUJOS · ARTE</h2>
+                <h1 class="hero-title">Convertimos tus momentos, personas e ideas en arte.</h1>
+                <p class="hero-subtitle">Retratos y obras originales hechas a mano, con la intención de capturar lo que te hace único.</p>
+                <div class="hero-buttons">
+                    <a href="#obras" class="btn btn-outline">VER OBRAS →</a>
+                    <a href="#personalizados" class="btn btn-primary">ENCARGAR UN CUADRO →</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="assets/hero.jpg" alt="Paleta de artista y pinceles" loading="lazy">
+            </div>
+        </section>
+
+        <!-- Sobre Mí -->
+        <section id="sobre-mi" class="sobre-mi section-padding bg-light">
+            <div class="container grid-2">
+                <div class="sobre-mi-text">
+                    <h2 class="section-title">El arte de lo personal</h2>
+                    <p>Soy la artista detrás de Nitxu.Art. Mi trabajo se centra en la creación de piezas únicas, dedicando tiempo y sensibilidad a cada trazo. Creo firmemente que cada persona, recuerdo o idea tiene una esencia que merece ser plasmada en un lienzo.</p>
+                    <p>Trabajo con técnicas manuales y dedico especial atención a los detalles, buscando siempre que la obra final no solo sea estéticamente hermosa, sino que transmita emoción.</p>
+                </div>
+                <div class="sobre-mi-images">
+                    <img src="assets/sobre-mi.jpg" alt="Proceso de pintura" class="img-main" loading="lazy">
+                    <img src="assets/proceso.jpg" alt="Detalle del pincel" class="img-secondary" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <!-- Galería de Obras -->
+        <section id="obras" class="obras section-padding">
+            <div class="container">
+                <h2 class="section-title text-center">Obras</h2>
+                
+                <!-- Filtros generados dinámicamente -->
+                <div id="gallery-filters" class="gallery-filters">
+                    <!-- Se llenará vía JS -->
+                </div>
+
+                <!-- Galería generada dinámicamente -->
+                <div id="gallery-grid" class="gallery-grid">
+                    <p class="loading-text">Cargando colección...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Personalizados -->
+        <section id="personalizados" class="personalizados section-padding bg-light">
+            <div class="container text-center">
+                <h2 class="section-title">TU FOTO. TU HISTORIA. TU OBRA.</h2>
+                <p class="personalizados-desc">Transformamos fotografías, personas, personajes, recuerdos e ideas en piezas artísticas irrepetibles. Tú eliges el estilo, el tamaño y la paleta de colores (color o blanco y negro).</p>
+                <a href="#calculadora" class="btn btn-primary">ENCARGAR MI CUADRO →</a>
+            </div>
+        </section>
+
+        <!-- Cómo Funciona -->
+        <section class="como-funciona section-padding">
+            <div class="container">
+                <h2 class="section-title text-center">¿Cómo funciona?</h2>
+                <div class="steps-grid">
+                    <div class="step">
+                        <h3>01 — ELIGE TU REFERENCIA</h3>
+                        <p>Envías la fotografía, personaje, recuerdo o idea que quieres convertir en obra.</p>
+                    </div>
+                    <div class="step">
+                        <h3>02 — PERSONALIZA</h3>
+                        <p>Elegimos el estilo, tamaño, color y características principales.</p>
+                    </div>
+                    <div class="step">
+                        <h3>03 — CREO TU OBRA</h3>
+                        <p>La obra se realiza artesanalmente cuidando los detalles y características elegidas.</p>
+                    </div>
+                    <div class="step">
+                        <h3>04 — RECIBES TU OBRA</h3>
+                        <p>Coordinamos la entrega del cuadro terminado.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Calculadora (Integración respetando clases y estructura original) -->
+        <section id="calculadora" class="calculadora-section bg-light section-padding">
+            
+            <div class="paint-calculator">
+              <div class="paint-calculator__card">
+                <p class="paint-calculator__eyebrow">Encargos personalizados</p>
+                <h1 class="paint-calculator__title">Calculá el precio de tu pintura</h1>
+                <p class="paint-calculator__subtitle">Elegí las características de tu pintura para obtener un precio estimado.</p>
+            
+                <div class="paint-calculator__section">
+                  <span class="paint-calculator__section-label">Tamaño del lienzo</span>
+                  <div class="paint-calculator__options" role="group" aria-label="Tamaño del lienzo" data-pc-group="size">
+                    <button type="button" class="paint-calculator__option" data-pc-option="size" data-pc-value="18x24" aria-pressed="false">
+                      <span class="paint-calculator__swatch-size paint-calculator__swatch-size--sm"></span>
+                      <span class="paint-calculator__option-name">18 × 24 cm</span>
+                    </button>
+                    <button type="button" class="paint-calculator__option" data-pc-option="size" data-pc-value="40x50" aria-pressed="false">
+                      <span class="paint-calculator__swatch-size paint-calculator__swatch-size--lg"></span>
+                      <span class="paint-calculator__option-name">40 × 50 cm</span>
+                    </button>
+                  </div>
+                </div>
+            
+                <div class="paint-calculator__section">
+                  <span class="paint-calculator__section-label">Estilo de pintura</span>
+                  <div class="paint-calculator__options" role="group" aria-label="Estilo de pintura" data-pc-group="style">
+                    <button type="button" class="paint-calculator__option" data-pc-option="style" data-pc-value="anime" aria-pressed="false">
+                      <span class="paint-calculator__swatch-style paint-calculator__swatch-style--anime"></span>
+                      <span class="paint-calculator__option-name">Anime</span>
+                    </button>
+                    <button type="button" class="paint-calculator__option" data-pc-option="style" data-pc-value="realismo" aria-pressed="false">
+                      <span class="paint-calculator__swatch-style paint-calculator__swatch-style--realismo"></span>
+                      <span class="paint-calculator__option-name">Realismo</span>
+                    </button>
+                  </div>
+                </div>
+            
+                <div class="paint-calculator__section">
+                  <span class="paint-calculator__section-label">Color</span>
+                  <div class="paint-calculator__options" role="group" aria-label="Color" data-pc-group="color">
+                    <button type="button" class="paint-calculator__option" data-pc-option="color" data-pc-value="byn" aria-pressed="false">
+                      <span class="paint-calculator__swatch-color paint-calculator__swatch-color--byn"></span>
+                      <span class="paint-calculator__option-name">Blanco y negro</span>
+                    </button>
+                    <button type="button" class="paint-calculator__option" data-pc-option="color" data-pc-value="color" aria-pressed="false">
+                      <span class="paint-calculator__swatch-color paint-calculator__swatch-color--color"></span>
+                      <span class="paint-calculator__option-name">A color</span>
+                    </button>
+                  </div>
+                </div>
+            
+                <div class="paint-calculator__result" data-pc-result aria-live="polite">
+                  <p class="paint-calculator__result-label">Precio estimado</p>
+                  <p class="paint-calculator__result-value" data-pc-price>Elegí las tres opciones</p>
+                  <p class="paint-calculator__result-note">El precio es una estimación y puede variar según la complejidad de la obra solicitada.</p>
+                </div>
+              </div>
+            </div>
+
+        </section>
+
+        <!-- Contacto -->
+        <section id="contacto" class="contacto section-padding">
+            <div class="container text-center">
+                <h2 class="section-title">Hablemos</h2>
+                <p class="contacto-desc">Si tienes dudas o quieres comenzar tu encargo, escríbeme por cualquiera de estos medios.</p>
+                <div class="contacto-links">
+                    <a href="#" class="contacto-link">Instagram: @tuinstagram</a>
+                    <a href="mailto:tucorreo@email.com" class="contacto-link">Email: tucorreo@email.com</a>
+                    <a href="#" class="contacto-link">WhatsApp: próximamente</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container text-center">
+            <h3>Nitxu.Art</h3>
+            <p>CUADROS · DIBUJOS · ARTE</p>
+            <div class="footer-social">
+                <a href="#">Instagram</a>
+                <a href="#">Email</a>
+            </div>
+            <p class="copyright">© 2026 Nitxu.Art. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+        <a class="lightbox-prev">&#10094;</a>
+        <a class="lightbox-next">&#10095;</a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/app.js"></script>
+    
+    <!-- Script original de la calculadora sin modificaciones lógicas -->
+    <script>
+    (function () {
+      "use strict";
+      var CONFIG = {
+        lienzos: {
+          "18x24": { costo: 124, etiqueta: "18 × 24 cm" },
+          "40x50": { costo: 305, etiqueta: "40 × 50 cm" }
+        },
+        precioPintura: 111,
+        consumoPintura: {
+          "18x24": { anime: { byn: 0.5, color: 1 }, realismo: { byn: 1, color: 1.5 } },
+          "40x50": { anime: { byn: 2, color: 3 }, realismo: { byn: 3, color: 5 } }
+        },
+        multiplicadorEstilo: { anime: 2.0, realismo: 3.0 },
+        multiplicadorColor: { byn: 1.0, color: 1.5 },
+        pasoRedondeo: 5
+      };
+      function redondearPrecio(valor) {
+        var paso = CONFIG.pasoRedondeo;
+        return Math.round(valor / paso) * paso;
+      }
+      function calcularPrecio(tamaño, estilo, color) {
+        var costoLienzo = CONFIG.lienzos[tamaño].costo;
+        var frascosEstimados = CONFIG.consumoPintura[tamaño][estilo][color];
+        var costoPintura = frascosEstimados * CONFIG.precioPintura;
+        var costoMateriales = costoLienzo + costoPintura;
+        var multEstilo = CONFIG.multiplicadorEstilo[estilo];
+        var multColor = CONFIG.multiplicadorColor[color];
+        var precioFinal = costoMateriales * multEstilo * multColor;
+        return redondearPrecio(precioFinal);
+      }
+      function formatearPrecio(valor) {
+        return "$" + valor.toLocaleString("es-AR");
+      }
+      var estado = { size: null, style: null, color: null };
+      var root = document.querySelector(".paint-calculator");
+      var priceEl = root.querySelector("[data-pc-price]");
+      var resultEl = root.querySelector("[data-pc-result]");
+      var optionButtons = root.querySelectorAll("[data-pc-option]");
+      function actualizarResultado() {
+        if (estado.size && estado.style && estado.color) {
+          var precio = calcularPrecio(estado.size, estado.style, estado.color);
+          priceEl.textContent = formatearPrecio(precio);
+        } else {
+          priceEl.textContent = "Elegí las tres opciones";
+        }
+      }
+      optionButtons.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var grupo = btn.getAttribute("data-pc-option");
+          var valor = btn.getAttribute("data-pc-value");
+          estado[grupo] = valor;
+          var hermanos = root.querySelectorAll('[data-pc-option="' + grupo + '"]');
+          hermanos.forEach(function (hermano) {
+            hermano.setAttribute("aria-pressed", hermano === btn ? "true" : "false");
+          });
+          actualizarResultado();
+        });
+      });
+      actualizarResultado();
+    })();
+    </script>
+</body>
+</html>
